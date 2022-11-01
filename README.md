@@ -40,3 +40,31 @@ non delta: 14 objects
 chain length = 1: 2 objects
 .git/objects/pack/pack-358d4e28d0428cecd9f8f1892cda177252630826.pack: ok
 ```
+
+```python
+git help everyday # A useful minimum set of commands for Everyday Git
+git config --list --show-origin # view all of your settings and where they are coming from
+```
+
+```python
+git diff # To see what you’ve changed but not yet staged. Compare whats in your your working directory with whats in your staging area.Changes you have made that you havn't staged. Shows only changes that are still unstaged.
+git diff --staged # compares your staged changes to your last commit.See what you have changed that will go in your next commit.
+```
+
+```python
+If you just use rm, you will need to follow it up with git add <fileRemoved>. git rm does this in one step.
+
+You can also use git rm --cached which will remove the file from the index (staging it for deletion on the next commit), but keep your copy in the local file system.
+
+git rm  # to remove the file from staging area and working tree and then commit
+git rm myfile.py --cached # remove the file from staging area but keep it in working tree
+```
+
+```python
+git mv # is one command instead of three — it’s a convenience function.
+"""short hand for
+mv oldname newname
+git add newname
+git rm oldname
+"""
+```
